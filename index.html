@@ -5067,11 +5067,11 @@ const inputRuntime = {
   onKey, toGame, enableTouch, togglePause, stickMove, stickEnd, press
 };
 const input = window.HazeHeroesCoreModules.createInput(inputRuntime);
+const boot = () => { try { cv.focus({ preventScroll: true }); } catch (e) {} focusHint.hidden = document.hasFocus(); requestAnimationFrame(frame); };
 const loopRuntime = { frame, frameInner, boot };
 const loop = window.HazeHeroesCoreModules.createLoop(loopRuntime);
 
 window.__haze = { closeDialog, minorReward, useSpot, HUB_SPOTS, nearestSpot, win, WPN, rotReach, dbgDraw: f => f({ ctx, IMG, text, textC, textW, panel, chopIcon, wrap, drawHub, drawQuestPop, W, H, G, P, keyChip, spr, outlined, bubble, drawDialog, say, shadowAt, drawBoon, BOONS, lv }), ACH, achGet, st, openBook, openFile, records, meiAnnoyLine, nurseTalkRef: () => nurseTalk, joanLine, resetTraining, onTrained, look, lookChanged, composeLook, lookName, openMirror, mirrorItems, visibleItems, pickComment, noMaskStop, MAPS, raffLines, ph, qev, QBY, QDEF, RS, adelleVisit, enterPharm, openBoard, hospitalReturn, qFill, qDoneOnBoard, stageTarget, updatePShop, nurseTalk, grantBoon, PATRONS, BOONS, wrap, addEnemy, startIntro, cheat, setCheat, openBoon, hurtPlayer, vacOn: () => !!vacLoop, music: () => Music.current,  G, P, save, startRun, nextRoom, toHub, openBoon, damageBoss, damageFlag, disperse, damage, makeRoom, beamLines, updateBeam, MAPS, canStand };
-const boot = () => { try { cv.focus({ preventScroll: true }); } catch (e) {} focusHint.hidden = document.hasFocus(); requestAnimationFrame(frame); };
 window.HazeHeroesMainRuntime = { boot };
 })();
 </script>
